@@ -376,7 +376,11 @@ vector<Evaluation> DatabaseManager::loadEvaluations(const string& courseNumber, 
 		INNER JOIN courses
 			ON assessments.course_id = courses.id
 		WHERE courses.course_number = ?
-			AND assessments.assessment_name = ?;
+			AND assessments.assessment_name = ?
+		ORDER BY CAST(
+			SUBSTR(evaluations.evaluation_name, LENGTH('Assignment') + 1)
+			AS INTEGER
+		);
 	)";
 
 	sqlite3_stmt* statement = nullptr;
