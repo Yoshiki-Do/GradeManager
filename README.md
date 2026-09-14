@@ -17,6 +17,16 @@ The application allows users to create courses, add assessments and evaluations,
 * Store grade data in a SQLite database
 * Validate user input
 
+## Screenshots
+
+### Main Menu
+
+![Main Menu](images/menu.png)
+
+### View Courses
+
+![View Courses](images/view-courses.png)
+
 ## Technologies
 
 * **C++**
